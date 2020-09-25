@@ -35,10 +35,10 @@ void finalReverse(int *arr , int size,int fac){
     int temp ;
     for(int j=0; j<(size+1)/2; j++ ){
 
-        for(int i=fac; i<(size/2); i++){
+        for(int i=fac; i<(size-1); i++){
             temp = arr[i];
-            arr[i] = arr[size-i-1];
-            arr[size-i-1] = temp;
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
         }
     }
     cout<<endl<<"Final Rotation : "<<endl;
